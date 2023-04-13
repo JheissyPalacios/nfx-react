@@ -1,0 +1,123 @@
+* {
+    font-family: "Poppins";
+}
+body {
+    background-color: #2D2D2D;
+    border: 10px solid black;
+    padding: 0;
+    margin: 0;
+    height: max-content;
+    font-family: 'Poppins';
+    color: white;
+}
+h1 {
+    font-size: 18px;
+    font-weight: 700;
+}
+p, li, span {
+    font-size: 10px;
+    font-weight: 400;
+    color: white;
+}
+img {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #00FFD1;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+a span {
+    color: black;
+    font-weight: 600;
+}
+ol, ul {
+   padding-left: 20px;
+}
+progress {
+    position: relative;
+    width: 100%;
+}
+progress::before,
+progress::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 14px;
+  border-radius: 20px;
+}
+progress::before {
+  background: #151517;
+  height: 14px;
+  width: 101%;
+}
+progress::after {
+  height: 14px;
+  background-color: #00FFD1;
+}
+progress[id="number_10"]::after {
+  width: 75%;
+  animation: progressAnimationStrike 6s, movebar 5s linear infinite;
+}
+@keyframes movebar {
+  from {background-position: 0 0}
+  to {background-position: 400px 0}
+}
+@keyframes progressAnimationStrike {
+     from { width: 0 }
+     to   { width: 75% }
+}
+progress[id="number_20"]::after {
+  width: 55%;
+  animation: progressAnimationStrike2 6s, movebar 5s linear infinite;
+}
+
+@keyframes progressAnimationStrike2 {
+     from { width: 0 }
+     to   { width: 55% }
+}
+progress[id="number_50"]::after {
+  width: 35%;
+  animation: progressAnimationStrike3 6s, movebar 5s linear infinite;
+}
+
+@keyframes progressAnimationStrike3 {
+     from { width: 0 }
+     to   { width: 35% }
+}
+.container {
+    height: max-content;
+    margin: 10px 70px 20px;
+}
+.container-content {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 74% auto;
+    gap: 20px;
+}
+.container-content__sidebar, .container-content__principal {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+@media screen and (max-width: 1000px) {
+    h1 {
+        font-size: 14px;
+    }
+    progress {
+        width: 100%;
+    }
+    .container {
+        margin: 10px;
+    }
+    .container-content {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+    .container-content__sidebar, .container-content__principal {
+        width: calc(100vw - 40px);
+    }
+}
