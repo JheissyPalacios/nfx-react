@@ -4,10 +4,15 @@ import rest from '../../public/assets/rest.svg'
 
 class Performance extends Component {
     render() {
+        const Style = {width: '100%'}
         return (
             <div className="container-footer__performance-block">
+                <div className="container-footer__performance-bookmark">
+                    <img src="assets/bookmark.png" alt="marcalibro"/>
+                    <span>{this.props.number}</span>
+                </div>
                 <img className="container-footer__performance-block-img" src={this.props.img} alt="Categoria_1"/>
-                <div>
+                <div style={Style}>
                     <div className="container-footer__performance-container">
                         <div className="container-footer__performance-info">
                             <p>Compra</p>
@@ -22,8 +27,8 @@ class Performance extends Component {
                             <h3>${this.props.acumulado}</h3>
                         </div>
                     </div>
-                    <Button href={this.props.hrefButton} name={this.props.nameButton} icon={rest} />
                 </div>
+                <Button href={this.props.hrefButton} name={this.props.nameButton} icon={rest} />
             </div>
         );
     }

@@ -103,5 +103,10 @@ p[data-accordion-content].block, ol[data-accordion-content].block, ul[data-accor
         h2 {
             font-size: 36px;
         }
+        a {
+            width: 100%;
+            padding: 10px 0;
+            background-color: #01FF85;
+        }
     }
 }

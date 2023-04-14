@@ -1,7 +1,6 @@
 .container-footer {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 .container-footer h1 {
     width: max-content;
@@ -12,16 +11,37 @@
 
 /* Container footer performance */
 .container-footer__performance {
+    width: 100%;
     display: flex;
     grid-gap: 20px;
+    justify-content: space-between;
 }
 .container-footer__performance-block {
-    display: flex;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 15% auto;
+    grid-template-rows: auto 28px;
     background-color: #222831;
-    border-radius: 20px;
-    padding: 14px;
-    grid-gap: 20px;
+    border-radius: 40px;
+    padding: 28px 14px 0px;
+    grid-gap: 12px;
     align-items: center;
+    position: relative;
+}
+.container-footer__performance-bookmark {
+    position: absolute;
+    top: -12px;
+    left: 30px;
+    width: 25px;
+    height: auto;
+    span {
+        font-size: 16px;
+        color: #222831;
+        font-weight: 600;
+        position: absolute;
+        top: 3px;
+        left: 10px;
+    }
 }
 .container-footer__performance-block p, .container-footer__performance-block h3 {
     color: white;
@@ -33,7 +53,7 @@
     margin-right: 10px;
 }
 .container-footer__performance-block h3 {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
 }
 .container-footer__performance-block .number {
@@ -44,7 +64,8 @@
 .container-footer__performance-container {
     display: flex;
     align-items: center;
-    grid-gap: 20px;
+    grid-gap: 12px;
+    justify-content: space-evenly;
     img {
         width: 16px;
         height: auto;
@@ -56,8 +77,8 @@
     align-items: center;
 }
 .container-footer__performance-block-img{
-    width: 55px;
-    height: 55px;
+    width: 100%;
+    height: auto;
     border: 4px solid #00FFD1;
     border-radius: 50%;
 }
@@ -73,9 +94,6 @@
     }
     .container-footer__performance-block .number {
         font-size: 26px;
-    }
-    .container-footer__performance-block img {
-        height: 72px;
     }
     .container-footer__performance-container {
         grid-gap: 0;
