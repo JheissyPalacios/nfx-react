@@ -1,0 +1,66 @@
+.sidebar-menu {
+    background: #141414;
+    width: 0px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    border-radius: 0px 50px 20px 0px;
+    transition: width .8s, background .8s;
+    div {
+        display: none;
+    }
+    &.is-open {
+        display: block;
+        padding: 20px;
+        margin-top: -10px;
+        width: max-content;
+        background: linear-gradient(90deg, rgba(20,20,20,1) 0%, rgba(19,33,30,1) 18%, rgba(18,68,59,1) 67%, rgba(30,114,99,1) 100%);
+        margin-right: 20px;
+        transition: width .8s, background .8s;
+        div {
+            display: flex;
+        }
+        @media screen and (max-width: 1000px) {
+            position: absolute;
+            padding: 20px;
+            width: 90vw;
+            height: 100vh;
+            margin-left: -10px;
+        }
+    }
+}
+.sidebar-container-logo {
+    align-items: center;
+    svg {
+       cursor: pointer;
+    }
+}
+.sidebar-container-ul {
+    ul {
+        padding-left: 0;
+        margin-left: -10px;
+        margin-top: 40px;
+    }
+    li {
+        display: grid;
+        margin-bottom: 30px;
+        grid-template-columns: 42px auto;
+        align-items: center;
+        justify-content: flex-start;
+        cursor: pointer;
+        img {
+            height: 20px;
+            &.Youtube {
+                height: 18px;
+            }
+        }
+        span {
+            margin-left: 10px;
+            font-size: 16px;
+        }
+    }
+}
+li:hover, li:active {
+        filter: invert(80%) sepia(78%) saturate(1508%) hue-rotate(144deg) brightness(231%) contrast(103%) !important;
+}
